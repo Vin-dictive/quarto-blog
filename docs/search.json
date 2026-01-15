@@ -1,0 +1,114 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Welcome to my blog! This is where I share my thoughts and ideas.\n\n\nFeel free to reach out at: email@example.com"
+  },
+  {
+    "objectID": "about.html#about-this-blog",
+    "href": "about.html#about-this-blog",
+    "title": "About",
+    "section": "",
+    "text": "Welcome to my blog! This is where I share my thoughts and ideas.\n\n\nFeel free to reach out at: email@example.com"
+  },
+  {
+    "objectID": "posts/database-agnostic-ml/index.html",
+    "href": "posts/database-agnostic-ml/index.html",
+    "title": "Database-Agnostic Machine Learning",
+    "section": "",
+    "text": "Do you have a database? Do you want to make predictions without the hassles of having data scientists? I got you covered!\n\n\n\nDatabase to ML Pipeline"
+  },
+  {
+    "objectID": "posts/database-agnostic-ml/index.html#do-you-have-a-database-want-predictions-without-data-scientists",
+    "href": "posts/database-agnostic-ml/index.html#do-you-have-a-database-want-predictions-without-data-scientists",
+    "title": "Database-Agnostic Machine Learning",
+    "section": "",
+    "text": "Do you have a database? Do you want to make predictions without the hassles of having data scientists? I got you covered!\n\n\n\nDatabase to ML Pipeline"
+  },
+  {
+    "objectID": "posts/database-agnostic-ml/index.html#introduction-motivation",
+    "href": "posts/database-agnostic-ml/index.html#introduction-motivation",
+    "title": "Database-Agnostic Machine Learning",
+    "section": "Introduction & Motivation",
+    "text": "Introduction & Motivation\nMost real-world data lives in relational databases. These are systems that organize information into tables, like spreadsheets, which can be linked together using keys - like connecting a “Customers” table with an “Orders” table.\nPain points in data science:\n\nML models expect flat tables\nRelational data is complex and interconnected\nBetter approaches are needed to reduce manual data preparation and speed up ML workflows"
+  },
+  {
+    "objectID": "posts/database-agnostic-ml/index.html#relational-data-basics",
+    "href": "posts/database-agnostic-ml/index.html#relational-data-basics",
+    "title": "Database-Agnostic Machine Learning",
+    "section": "Relational Data Basics",
+    "text": "Relational Data Basics\nA relational database consists of tables, rows, and columns, with primary keys and foreign keys connecting tables.\nExamples of real-world relational data:\n\nCustomers, orders, products\nUsers, events, transactions\nDatabases have inbuilt graph charts explaining relationships between tables\n\n\n\n\nRelational Database Schema"
+  },
+  {
+    "objectID": "posts/database-agnostic-ml/index.html#traditional-ml-workflow-on-relational-data",
+    "href": "posts/database-agnostic-ml/index.html#traditional-ml-workflow-on-relational-data",
+    "title": "Database-Agnostic Machine Learning",
+    "section": "Traditional ML Workflow on Relational Data",
+    "text": "Traditional ML Workflow on Relational Data\nManual data preparation steps:\n\nWriting joins\nAggregations and feature engineering\nFlattening data into a single table\nData is spread out and not easy to track\n\nProblems with this approach:\n\nTime-consuming\nError-prone\nHighly specific to one schema"
+  },
+  {
+    "objectID": "posts/database-agnostic-ml/index.html#the-core-challenge",
+    "href": "posts/database-agnostic-ml/index.html#the-core-challenge",
+    "title": "Database-Agnostic Machine Learning",
+    "section": "The Core Challenge",
+    "text": "The Core Challenge\nEach database has a different schema. Models and pipelines often break when schemas change. Reusing models across organizations or datasets is difficult.\n\n\n\nThe Challenge"
+  },
+  {
+    "objectID": "posts/database-agnostic-ml/index.html#new-approach-database-agnostic-modeling",
+    "href": "posts/database-agnostic-ml/index.html#new-approach-database-agnostic-modeling",
+    "title": "Database-Agnostic Machine Learning",
+    "section": "New Approach: Database-Agnostic Modeling",
+    "text": "New Approach: Database-Agnostic Modeling\nHigh-level idea: build models that learn directly from relational structure.\nKey goals:\n\nAvoid manual joins\nReduce schema-specific logic\nGeneralize across different databases"
+  },
+  {
+    "objectID": "posts/database-agnostic-ml/index.html#how-this-works-conceptually",
+    "href": "posts/database-agnostic-ml/index.html#how-this-works-conceptually",
+    "title": "Database-Agnostic Machine Learning",
+    "section": "How This Works (Conceptually)",
+    "text": "How This Works (Conceptually)\nA concrete example of this approach is KumoRFM, a relational foundation model built for predictive tasks on structured data.\nInstead of requiring manual feature engineering or separate models for each task, KumoRFM represents tables and their foreign‑key relationships as a temporal, heterogeneous graph. Each table row becomes a node, and relationships between tables become edges.\n\n\n\nGraph Representation\n\n\nIt uses a Relational Graph Transformer architecture, which performs attention across the graph to integrate information from related tables and capture complex multi‑table patterns in the data.\n\nGraph Transformers in Action\nGraph transformers are a powerful architecture that extends the transformer model (famous from GPT and BERT) to work with graph-structured data. While traditional transformers work on sequences (like sentences), graph transformers can process nodes and edges in a graph.\nWhere else are graph transformers used?\n\nSocial Networks: Predicting user behavior and connections on platforms like Facebook or LinkedIn\nDrug Discovery: Modeling molecular structures where atoms are nodes and bonds are edges\nTraffic Prediction: Understanding road networks where intersections are nodes and roads are edges\nRecommendation Systems: Connecting users, products, and interactions in e-commerce platforms\n\n\n\n\nGraph Transformer Applications\n\n\nWhen a predictive query is submitted, KumoRFM extracts context examples from historical subgraphs relevant to the task and applies in-context learning at inference time, generating predictions without task-specific training.\nThis allows the model to handle different schemas and task types directly, essentially learning relational structure and semantics once and applying that knowledge broadly."
+  },
+  {
+    "objectID": "posts/database-agnostic-ml/index.html#advantages-of-this-approach",
+    "href": "posts/database-agnostic-ml/index.html#advantages-of-this-approach",
+    "title": "Database-Agnostic Machine Learning",
+    "section": "Advantages of This Approach",
+    "text": "Advantages of This Approach\n\nLess feature engineering - No more manual SQL queries and aggregations\nFaster experimentation - Test ideas quickly without data prep\nMore scalable ML pipelines - Works across different databases\nEasier deployment - One model for multiple use cases"
+  },
+  {
+    "objectID": "posts/database-agnostic-ml/index.html#challenges-and-tradeoffs",
+    "href": "posts/database-agnostic-ml/index.html#challenges-and-tradeoffs",
+    "title": "Database-Agnostic Machine Learning",
+    "section": "Challenges and Tradeoffs",
+    "text": "Challenges and Tradeoffs\n\nComputational complexity\nInterpretability of learned representations\nPerformance versus domain-specific features\nIntegration with existing data infrastructure"
+  },
+  {
+    "objectID": "posts/database-agnostic-ml/index.html#implications-for-data-science",
+    "href": "posts/database-agnostic-ml/index.html#implications-for-data-science",
+    "title": "Database-Agnostic Machine Learning",
+    "section": "Implications for Data Science",
+    "text": "Implications for Data Science\nThis approach shifts the role of data scientists from feature engineering to problem framing. Similar to foundation models in other domains (like GPT for text or DALL-E for images), it points toward the future of ML on structured data.\nThe transformation:\n\nBefore: 80% time on data prep, 20% on modeling\nAfter: 20% time on data prep, 80% on insights and decisions\n\n\n\n\nRole Transformation"
+  },
+  {
+    "objectID": "posts/database-agnostic-ml/index.html#conclusion",
+    "href": "posts/database-agnostic-ml/index.html#conclusion",
+    "title": "Database-Agnostic Machine Learning",
+    "section": "Conclusion",
+    "text": "Conclusion\nDatabase-agnostic ML reduces friction between relational data and modeling. Solutions like KumoRFM show that this approach is possible and practical today.\nKey takeaway: Leveraging relational structure directly allows faster, more robust predictions across diverse databases. This means businesses can unlock the full value of their relational data in a way that is fast, reliable, and scalable.\nAs a result, this shift transforms the role of data scientists from manual feature engineering to higher-level problem formulation and decision-making."
+  },
+  {
+    "objectID": "posts/database-agnostic-ml/index.html#references",
+    "href": "posts/database-agnostic-ml/index.html#references",
+    "title": "Database-Agnostic Machine Learning",
+    "section": "References",
+    "text": "References\n\nKumoRFM Video Introduction\nKumoRFM Getting Started\nCase Study: Slashing Utility Costs with KumoRFM"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Viction’s Blogs",
+    "section": "",
+    "text": "Database-Agnostic Machine Learning\n\n\n\nmachine-learning\n\ndatabases\n\ndata-science\n\n\n\nLearn how to make predictions from relational databases without the hassle of manual feature engineering\n\n\n\n\n\nJan 20, 2024\n\n\nViction\n\n\n\n\n\nNo matching items"
+  }
+]

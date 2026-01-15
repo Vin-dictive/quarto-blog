@@ -1,0 +1,29 @@
+/* Custom styles */
+.quarto-title-banner {
+  background-color: #4a90e2;
+}
+
+/* Dark theme adjustments */
+html[data-bs-theme="dark"] .quarto-title-banner {
+  background-color: #2c5282;
+}
+
+/* Navbar fixes for theme switching */
+.navbar {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+  transition: color 0.3s ease;
+}
+
+/* Ensure navbar stays consistent */
+html[data-bs-theme="dark"] .navbar {
+  background-color: #222 !important;
+  border-bottom: 1px solid #444;
+}
+
+html[data-bs-theme="light"] .navbar {
+  background-color: #fff !important;
+  border-bottom: 1px solid #dee2e6;
+}
