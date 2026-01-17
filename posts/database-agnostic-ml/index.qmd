@@ -5,6 +5,10 @@ date: "2024-01-20"
 categories: [machine-learning, databases, data-science]
 description: "Learn how to make predictions from relational databases without the hassle of manual feature engineering"
 image: "thumbnail.svg"
+format:
+  html: default
+  pdf:
+    fig-format: png
 ---
 
 Do you have a database? Do you want to make predictions without the hassles of having data scientists? I got you covered!

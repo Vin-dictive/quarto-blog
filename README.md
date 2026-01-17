@@ -52,17 +52,21 @@ This generates the static site in the `docs/` directory (configured for GitHub P
 
 ### Generate HTML for GitHub Pages
 
-To generate the HTML files in the `docs` folder for GitHub Pages deployment:
+To generate both HTML and PDF files in the `docs` folder for GitHub Pages deployment:
 
 ```bash
 quarto render
 ```
 
+This will create:
+- HTML files for the website
+- PDF versions of individual blog posts
+
 Then commit and push:
 
 ```bash
 git add docs/
-git commit -m "Build site"
+git commit -m "Build site with PDFs"
 git push
 ```
 
@@ -74,6 +78,7 @@ git push
 4. Click Save
 
 Your site will be live at: `https://[username].github.io/[repository-name]/`
+PDF versions will be available at: `https://[username].github.io/[repository-name]/posts/[post-name]/index.pdf`
 
 ## Adding New Blog Posts
 
