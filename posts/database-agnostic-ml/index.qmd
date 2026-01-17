@@ -13,27 +13,19 @@ format:
 
 Do you have a database? Do you want to make predictions without the hassles of having data scientists? I got you covered!
 
-![Database to ML Pipeline](placeholder-pipeline.svg){fig-alt="Illustration of database to ML pipeline"}
-
 ## The Challenge with Relational Data
 
 Most companies store their data in relational databases. These are systems that organize information into tables, like spreadsheets, which can be linked together using keys - like connecting a "Customers" table with an "Orders" table. While this structure is great for storing large amounts of data efficiently, it can be challenging when you want to use machine learning to make predictions or gain insights.
 
 Traditionally, machine learning models expect all the data in a single, flat table. This means analysts have to manually combine tables, calculate summary statistics, and create new "features" from the raw data. This is a process that is very time consuming, error-prone, and specific to each database. If a database changes even slightly, the model may break, and all the work has to be redone - fyi job of the data scientist.
 
-![Relational Database Schema](placeholder-schema.svg){fig-alt="Example of relational database schema showing table relationships"}
+![Data Science Pipeline](placeholder-pipeline.png){fig-alt="Data Science Pipeline"}
 
 ## The Solution: Database-Agnostic Machine Learning
 
 The solution is database-agnostic machine learning, which allows models to work directly with relational data without manual preparation. "Agnostic" here means flexible and the model can work across different database structures without needing to be customized for each one.
 
-![The Challenge](placeholder-challenge.svg){fig-alt="Visualization of schema diversity challenge"}
-
-## KumoRFM: A Real-World Example
-
-A real-world example of this approach is **KumoRFM**, a tool that works like a "foundation model" for relational data. Think of it as a large language model but for structured business data instead of text. KumoRFM represents tables and their relationships as a graph, where each row is a point (node) and connections between tables are lines (edges). Using a graph transformer, the model can automatically learn patterns and relationships across tables, so it understands the structure and meaning of the data.
-
-![Graph Representation](placeholder-graph.svg){fig-alt="Relational data represented as a graph structure"}
+![Relational Database Schema](placeholder-schema.png){fig-alt="Example of relational database schema showing table relationships"}
 
 ## Graph Transformers: Beyond Databases
 
@@ -47,7 +39,14 @@ Graph transformers are a powerful architecture that extends the transformer mode
 - **Recommendation Systems:** Connecting users, products, and interactions in e-commerce platforms to suggest relevant items
 - **Knowledge Graphs:** Organizing and reasoning over facts and relationships, like Google's Knowledge Graph
 
-![Graph Transformer Applications](placeholder-applications.svg){fig-alt="Various applications of graph transformers"}
+![Graph Transformer Visulization](placeholder-graph.gif){fig-alt="BertViz"}
+
+
+## KumoRFM: A Real-World Example
+
+A real-world example of this approach is **KumoRFM**, a tool that works like a "foundation model" for relational data. Think of it as a large language model but for structured business data instead of text. KumoRFM represents tables and their relationships as a graph, where each row is a point (node) and connections between tables are lines (edges). Using a graph transformer, the model can automatically learn patterns and relationships across tables, so it understands the structure and meaning of the data.
+
+![Key capabilities of RFM](placeholder-kumo.png){fig-alt="Key capabilities of RFM"}
 
 ## Key Advantages
 

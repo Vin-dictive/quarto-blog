@@ -285,8 +285,8 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#the-challenge-with-relational-data" id="toc-the-challenge-with-relational-data" class="nav-link active" data-scroll-target="#the-challenge-with-relational-data">The Challenge with Relational Data</a></li>
   <li><a href="#the-solution-database-agnostic-machine-learning" id="toc-the-solution-database-agnostic-machine-learning" class="nav-link" data-scroll-target="#the-solution-database-agnostic-machine-learning">The Solution: Database-Agnostic Machine Learning</a></li>
-  <li><a href="#kumorfm-a-real-world-example" id="toc-kumorfm-a-real-world-example" class="nav-link" data-scroll-target="#kumorfm-a-real-world-example">KumoRFM: A Real-World Example</a></li>
   <li><a href="#graph-transformers-beyond-databases" id="toc-graph-transformers-beyond-databases" class="nav-link" data-scroll-target="#graph-transformers-beyond-databases">Graph Transformers: Beyond Databases</a></li>
+  <li><a href="#kumorfm-a-real-world-example" id="toc-kumorfm-a-real-world-example" class="nav-link" data-scroll-target="#kumorfm-a-real-world-example">KumoRFM: A Real-World Example</a></li>
   <li><a href="#key-advantages" id="toc-key-advantages" class="nav-link" data-scroll-target="#key-advantages">Key Advantages</a></li>
   <li><a href="#the-impact" id="toc-the-impact" class="nav-link" data-scroll-target="#the-impact">The Impact</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
@@ -339,20 +339,14 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Do you have a database? Do you want to make predictions without the hassles of having data scientists? I got you covered!</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="placeholder-pipeline.svg" class="img-fluid figure-img" alt="Illustration of database to ML pipeline"></p>
-<figcaption>Database to ML Pipeline</figcaption>
-</figure>
-</div>
 <section id="the-challenge-with-relational-data" class="level2">
 <h2 class="anchored" data-anchor-id="the-challenge-with-relational-data">The Challenge with Relational Data</h2>
 <p>Most companies store their data in relational databases. These are systems that organize information into tables, like spreadsheets, which can be linked together using keys - like connecting a “Customers” table with an “Orders” table. While this structure is great for storing large amounts of data efficiently, it can be challenging when you want to use machine learning to make predictions or gain insights.</p>
 <p>Traditionally, machine learning models expect all the data in a single, flat table. This means analysts have to manually combine tables, calculate summary statistics, and create new “features” from the raw data. This is a process that is very time consuming, error-prone, and specific to each database. If a database changes even slightly, the model may break, and all the work has to be redone - fyi job of the data scientist.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="placeholder-schema.svg" class="img-fluid figure-img" alt="Example of relational database schema showing table relationships"></p>
-<figcaption>Relational Database Schema</figcaption>
+<p><img src="placeholder-pipeline.png" class="img-fluid figure-img" alt="Data Science Pipeline"></p>
+<figcaption>Data Science Pipeline</figcaption>
 </figure>
 </div>
 </section>
@@ -361,18 +355,8 @@ ul.task-list li input[type="checkbox"] {
 <p>The solution is database-agnostic machine learning, which allows models to work directly with relational data without manual preparation. “Agnostic” here means flexible and the model can work across different database structures without needing to be customized for each one.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="placeholder-challenge.svg" class="img-fluid figure-img" alt="Visualization of schema diversity challenge"></p>
-<figcaption>The Challenge</figcaption>
-</figure>
-</div>
-</section>
-<section id="kumorfm-a-real-world-example" class="level2">
-<h2 class="anchored" data-anchor-id="kumorfm-a-real-world-example">KumoRFM: A Real-World Example</h2>
-<p>A real-world example of this approach is <strong>KumoRFM</strong>, a tool that works like a “foundation model” for relational data. Think of it as a large language model but for structured business data instead of text. KumoRFM represents tables and their relationships as a graph, where each row is a point (node) and connections between tables are lines (edges). Using a graph transformer, the model can automatically learn patterns and relationships across tables, so it understands the structure and meaning of the data.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="placeholder-graph.svg" class="img-fluid figure-img" alt="Relational data represented as a graph structure"></p>
-<figcaption>Graph Representation</figcaption>
+<p><img src="placeholder-schema.png" class="img-fluid figure-img" alt="Example of relational database schema showing table relationships"></p>
+<figcaption>Relational Database Schema</figcaption>
 </figure>
 </div>
 </section>
@@ -389,8 +373,18 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="placeholder-applications.svg" class="img-fluid figure-img" alt="Various applications of graph transformers"></p>
-<figcaption>Graph Transformer Applications</figcaption>
+<p><img src="placeholder-graph.gif" class="img-fluid figure-img" alt="BertViz"></p>
+<figcaption>Graph Transformer Visulization</figcaption>
+</figure>
+</div>
+</section>
+<section id="kumorfm-a-real-world-example" class="level2">
+<h2 class="anchored" data-anchor-id="kumorfm-a-real-world-example">KumoRFM: A Real-World Example</h2>
+<p>A real-world example of this approach is <strong>KumoRFM</strong>, a tool that works like a “foundation model” for relational data. Think of it as a large language model but for structured business data instead of text. KumoRFM represents tables and their relationships as a graph, where each row is a point (node) and connections between tables are lines (edges). Using a graph transformer, the model can automatically learn patterns and relationships across tables, so it understands the structure and meaning of the data.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="placeholder-kumo.png" class="img-fluid figure-img" alt="Key capabilities of RFM"></p>
+<figcaption>Key capabilities of RFM</figcaption>
 </figure>
 </div>
 </section>
