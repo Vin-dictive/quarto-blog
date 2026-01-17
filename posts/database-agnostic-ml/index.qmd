@@ -1,6 +1,6 @@
 ---
 title: "Database-Agnostic Machine Learning"
-author: "Viction"
+author: "Vinay Valson"
 date: "2024-01-20"
 categories: [machine-learning, databases, data-science]
 description: "Learn how to make predictions from relational databases without the hassle of manual feature engineering"

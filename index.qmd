@@ -1,5 +1,5 @@
 ---
-title: "Viction's Blogs"
+title: "Vinay Valson's Blogs"
 listing:
   contents: posts
   sort: "date desc"
