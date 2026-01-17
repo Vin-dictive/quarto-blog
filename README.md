@@ -67,6 +67,7 @@ git push
 ```
 
 **GitHub Pages Setup:**
+
 1. Go to your repository Settings → Pages
 2. Under "Source", select "Deploy from a branch"
 3. Select branch: `main` and folder: `/docs`
@@ -183,11 +184,13 @@ The site is configured to build to the `docs/` folder for easy GitHub Pages depl
 **Steps:**
 
 1. Build your site:
+
    ```bash
    quarto render
    ```
 
 2. Commit and push the docs folder:
+
    ```bash
    git add docs/
    git commit -m "Deploy site"
@@ -199,51 +202,6 @@ The site is configured to build to the `docs/` folder for easy GitHub Pages depl
    - Source: Deploy from a branch
    - Branch: `main`, Folder: `/docs`
    - Save
-
-### GitHub Pages (Using GitHub Actions)
-
-Alternatively, use GitHub Actions for automatic deployment:
-
-1. Create `.github/workflows/publish.yml`:
-
-```yaml
-name: Publish
-
-on:
-  push:
-    branches: main
-
-jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-      - uses: quarto-dev/quarto-actions/setup@v2
-      - run: quarto render
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
-```
-
-2. Enable GitHub Pages to deploy from `gh-pages` branch
-
-### Netlify
-
-1. Connect your repository to Netlify
-2. Build command: `quarto render`
-3. Publish directory: `_site`
-
-## Tips
-
-- Use descriptive folder names for posts (e.g., `2024-01-20-my-post-title`)
-- Add images to the post folder and reference them relatively
-- Use categories consistently for better organization
-- Preview changes locally before publishing
-- Keep post URLs clean by using `index.qmd` in each folder
 
 ## Troubleshooting
 

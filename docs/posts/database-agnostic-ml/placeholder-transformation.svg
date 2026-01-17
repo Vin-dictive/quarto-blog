@@ -1,0 +1,19 @@
+<svg width="500" height="250" xmlns="http://www.w3.org/2000/svg">
+  <rect width="500" height="250" fill="#e1f5fe" stroke="#0288d1" stroke-width="2"/>
+  <text x="250" y="25" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#01579b">Data Scientist Role Evolution</text>
+  <rect x="50" y="60" width="150" height="80" fill="#ffcdd2" stroke="#d32f2f" stroke-width="1"/>
+  <text x="125" y="80" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#d32f2f">BEFORE</text>
+  <text x="125" y="100" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">80% Data Prep</text>
+  <text x="125" y="115" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">20% Modeling</text>
+  <path d="M 210 100 L 280 100" stroke="#333" stroke-width="3" marker-end="url(#arrowhead)"/>
+  <rect x="300" y="60" width="150" height="80" fill="#c8e6c9" stroke="#388e3c" stroke-width="1"/>
+  <text x="375" y="80" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#388e3c">AFTER</text>
+  <text x="375" y="100" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">20% Data Prep</text>
+  <text x="375" y="115" text-anchor="middle" font-family="Arial" font-size="10" fill="#333">80% Insights</text>
+  <text x="250" y="180" text-anchor="middle" font-family="Arial" font-size="12" fill="#01579b">Focus shifts from manual work to strategic thinking</text>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

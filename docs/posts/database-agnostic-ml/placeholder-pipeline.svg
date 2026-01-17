@@ -1,0 +1,16 @@
+<svg width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="200" fill="#e3f2fd" stroke="#1976d2" stroke-width="2"/>
+  <rect x="20" y="60" width="80" height="80" fill="#fff" stroke="#333" stroke-width="1"/>
+  <text x="60" y="105" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Database</text>
+  <path d="M 110 100 L 150 100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="160" y="60" width="80" height="80" fill="#fff" stroke="#333" stroke-width="1"/>
+  <text x="200" y="105" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">ML Model</text>
+  <path d="M 250 100 L 290 100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <rect x="300" y="60" width="80" height="80" fill="#fff" stroke="#333" stroke-width="1"/>
+  <text x="340" y="105" text-anchor="middle" font-family="Arial" font-size="12" fill="#333">Predictions</text>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333"/>
+    </marker>
+  </defs>
+</svg>

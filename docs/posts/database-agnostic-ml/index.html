@@ -283,20 +283,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#do-you-have-a-database-want-predictions-without-data-scientists" id="toc-do-you-have-a-database-want-predictions-without-data-scientists" class="nav-link active" data-scroll-target="#do-you-have-a-database-want-predictions-without-data-scientists">Do You Have a Database? Want Predictions Without Data Scientists?</a></li>
-  <li><a href="#introduction-motivation" id="toc-introduction-motivation" class="nav-link" data-scroll-target="#introduction-motivation">Introduction &amp; Motivation</a></li>
-  <li><a href="#relational-data-basics" id="toc-relational-data-basics" class="nav-link" data-scroll-target="#relational-data-basics">Relational Data Basics</a></li>
-  <li><a href="#traditional-ml-workflow-on-relational-data" id="toc-traditional-ml-workflow-on-relational-data" class="nav-link" data-scroll-target="#traditional-ml-workflow-on-relational-data">Traditional ML Workflow on Relational Data</a></li>
-  <li><a href="#the-core-challenge" id="toc-the-core-challenge" class="nav-link" data-scroll-target="#the-core-challenge">The Core Challenge</a></li>
-  <li><a href="#new-approach-database-agnostic-modeling" id="toc-new-approach-database-agnostic-modeling" class="nav-link" data-scroll-target="#new-approach-database-agnostic-modeling">New Approach: Database-Agnostic Modeling</a></li>
-  <li><a href="#how-this-works-conceptually" id="toc-how-this-works-conceptually" class="nav-link" data-scroll-target="#how-this-works-conceptually">How This Works (Conceptually)</a>
-  <ul class="collapse">
-  <li><a href="#graph-transformers-in-action" id="toc-graph-transformers-in-action" class="nav-link" data-scroll-target="#graph-transformers-in-action">Graph Transformers in Action</a></li>
-  </ul></li>
-  <li><a href="#advantages-of-this-approach" id="toc-advantages-of-this-approach" class="nav-link" data-scroll-target="#advantages-of-this-approach">Advantages of This Approach</a></li>
-  <li><a href="#challenges-and-tradeoffs" id="toc-challenges-and-tradeoffs" class="nav-link" data-scroll-target="#challenges-and-tradeoffs">Challenges and Tradeoffs</a></li>
-  <li><a href="#implications-for-data-science" id="toc-implications-for-data-science" class="nav-link" data-scroll-target="#implications-for-data-science">Implications for Data Science</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#the-challenge-with-relational-data" id="toc-the-challenge-with-relational-data" class="nav-link active" data-scroll-target="#the-challenge-with-relational-data">The Challenge with Relational Data</a></li>
+  <li><a href="#the-solution-database-agnostic-machine-learning" id="toc-the-solution-database-agnostic-machine-learning" class="nav-link" data-scroll-target="#the-solution-database-agnostic-machine-learning">The Solution: Database-Agnostic Machine Learning</a></li>
+  <li><a href="#kumorfm-a-real-world-example" id="toc-kumorfm-a-real-world-example" class="nav-link" data-scroll-target="#kumorfm-a-real-world-example">KumoRFM: A Real-World Example</a></li>
+  <li><a href="#graph-transformers-beyond-databases" id="toc-graph-transformers-beyond-databases" class="nav-link" data-scroll-target="#graph-transformers-beyond-databases">Graph Transformers: Beyond Databases</a></li>
+  <li><a href="#key-advantages" id="toc-key-advantages" class="nav-link" data-scroll-target="#key-advantages">Key Advantages</a></li>
+  <li><a href="#the-impact" id="toc-the-impact" class="nav-link" data-scroll-target="#the-impact">The Impact</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
@@ -346,146 +338,82 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="do-you-have-a-database-want-predictions-without-data-scientists" class="level2">
-<h2 class="anchored" data-anchor-id="do-you-have-a-database-want-predictions-without-data-scientists">Do You Have a Database? Want Predictions Without Data Scientists?</h2>
 <p>Do you have a database? Do you want to make predictions without the hassles of having data scientists? I got you covered!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="placeholder-pipeline.jpg" class="img-fluid figure-img" alt="Illustration of database to ML pipeline"></p>
+<p><img src="placeholder-pipeline.svg" class="img-fluid figure-img" alt="Illustration of database to ML pipeline"></p>
 <figcaption>Database to ML Pipeline</figcaption>
 </figure>
 </div>
-</section>
-<section id="introduction-motivation" class="level2">
-<h2 class="anchored" data-anchor-id="introduction-motivation">Introduction &amp; Motivation</h2>
-<p>Most real-world data lives in relational databases. These are systems that organize information into tables, like spreadsheets, which can be linked together using keys - like connecting a “Customers” table with an “Orders” table.</p>
-<p><strong>Pain points in data science:</strong></p>
-<ul>
-<li>ML models expect flat tables</li>
-<li>Relational data is complex and interconnected</li>
-<li>Better approaches are needed to reduce manual data preparation and speed up ML workflows</li>
-</ul>
-</section>
-<section id="relational-data-basics" class="level2">
-<h2 class="anchored" data-anchor-id="relational-data-basics">Relational Data Basics</h2>
-<p>A relational database consists of tables, rows, and columns, with primary keys and foreign keys connecting tables.</p>
-<p><strong>Examples of real-world relational data:</strong></p>
-<ul>
-<li>Customers, orders, products</li>
-<li>Users, events, transactions</li>
-<li>Databases have inbuilt graph charts explaining relationships between tables</li>
-</ul>
+<section id="the-challenge-with-relational-data" class="level2">
+<h2 class="anchored" data-anchor-id="the-challenge-with-relational-data">The Challenge with Relational Data</h2>
+<p>Most companies store their data in relational databases. These are systems that organize information into tables, like spreadsheets, which can be linked together using keys - like connecting a “Customers” table with an “Orders” table. While this structure is great for storing large amounts of data efficiently, it can be challenging when you want to use machine learning to make predictions or gain insights.</p>
+<p>Traditionally, machine learning models expect all the data in a single, flat table. This means analysts have to manually combine tables, calculate summary statistics, and create new “features” from the raw data. This is a process that is very time consuming, error-prone, and specific to each database. If a database changes even slightly, the model may break, and all the work has to be redone - fyi job of the data scientist.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="placeholder-schema.jpg" class="img-fluid figure-img" alt="Example of relational database schema showing table relationships"></p>
+<p><img src="placeholder-schema.svg" class="img-fluid figure-img" alt="Example of relational database schema showing table relationships"></p>
 <figcaption>Relational Database Schema</figcaption>
 </figure>
 </div>
 </section>
-<section id="traditional-ml-workflow-on-relational-data" class="level2">
-<h2 class="anchored" data-anchor-id="traditional-ml-workflow-on-relational-data">Traditional ML Workflow on Relational Data</h2>
-<p><strong>Manual data preparation steps:</strong></p>
-<ul>
-<li>Writing joins</li>
-<li>Aggregations and feature engineering</li>
-<li>Flattening data into a single table</li>
-<li>Data is spread out and not easy to track</li>
-</ul>
-<p><strong>Problems with this approach:</strong></p>
-<ul>
-<li>Time-consuming</li>
-<li>Error-prone</li>
-<li>Highly specific to one schema</li>
-</ul>
-</section>
-<section id="the-core-challenge" class="level2">
-<h2 class="anchored" data-anchor-id="the-core-challenge">The Core Challenge</h2>
-<p>Each database has a different schema. Models and pipelines often break when schemas change. Reusing models across organizations or datasets is difficult.</p>
+<section id="the-solution-database-agnostic-machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="the-solution-database-agnostic-machine-learning">The Solution: Database-Agnostic Machine Learning</h2>
+<p>The solution is database-agnostic machine learning, which allows models to work directly with relational data without manual preparation. “Agnostic” here means flexible and the model can work across different database structures without needing to be customized for each one.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="placeholder-challenge.jpg" class="img-fluid figure-img" alt="Visualization of schema diversity challenge"></p>
+<p><img src="placeholder-challenge.svg" class="img-fluid figure-img" alt="Visualization of schema diversity challenge"></p>
 <figcaption>The Challenge</figcaption>
 </figure>
 </div>
 </section>
-<section id="new-approach-database-agnostic-modeling" class="level2">
-<h2 class="anchored" data-anchor-id="new-approach-database-agnostic-modeling">New Approach: Database-Agnostic Modeling</h2>
-<p><strong>High-level idea:</strong> build models that learn directly from relational structure.</p>
-<p><strong>Key goals:</strong></p>
-<ul>
-<li>Avoid manual joins</li>
-<li>Reduce schema-specific logic</li>
-<li>Generalize across different databases</li>
-</ul>
-</section>
-<section id="how-this-works-conceptually" class="level2">
-<h2 class="anchored" data-anchor-id="how-this-works-conceptually">How This Works (Conceptually)</h2>
-<p>A concrete example of this approach is <strong>KumoRFM</strong>, a relational foundation model built for predictive tasks on structured data.</p>
-<p>Instead of requiring manual feature engineering or separate models for each task, KumoRFM represents tables and their foreign‑key relationships as a temporal, heterogeneous graph. Each table row becomes a node, and relationships between tables become edges.</p>
+<section id="kumorfm-a-real-world-example" class="level2">
+<h2 class="anchored" data-anchor-id="kumorfm-a-real-world-example">KumoRFM: A Real-World Example</h2>
+<p>A real-world example of this approach is <strong>KumoRFM</strong>, a tool that works like a “foundation model” for relational data. Think of it as a large language model but for structured business data instead of text. KumoRFM represents tables and their relationships as a graph, where each row is a point (node) and connections between tables are lines (edges). Using a graph transformer, the model can automatically learn patterns and relationships across tables, so it understands the structure and meaning of the data.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="placeholder-graph.jpg" class="img-fluid figure-img" alt="Relational data represented as a graph structure"></p>
+<p><img src="placeholder-graph.svg" class="img-fluid figure-img" alt="Relational data represented as a graph structure"></p>
 <figcaption>Graph Representation</figcaption>
 </figure>
 </div>
-<p>It uses a <strong>Relational Graph Transformer</strong> architecture, which performs attention across the graph to integrate information from related tables and capture complex multi‑table patterns in the data.</p>
-<section id="graph-transformers-in-action" class="level3">
-<h3 class="anchored" data-anchor-id="graph-transformers-in-action">Graph Transformers in Action</h3>
+</section>
+<section id="graph-transformers-beyond-databases" class="level2">
+<h2 class="anchored" data-anchor-id="graph-transformers-beyond-databases">Graph Transformers: Beyond Databases</h2>
 <p>Graph transformers are a powerful architecture that extends the transformer model (famous from GPT and BERT) to work with graph-structured data. While traditional transformers work on sequences (like sentences), graph transformers can process nodes and edges in a graph.</p>
 <p><strong>Where else are graph transformers used?</strong></p>
 <ul>
-<li><strong>Social Networks:</strong> Predicting user behavior and connections on platforms like Facebook or LinkedIn</li>
-<li><strong>Drug Discovery:</strong> Modeling molecular structures where atoms are nodes and bonds are edges</li>
-<li><strong>Traffic Prediction:</strong> Understanding road networks where intersections are nodes and roads are edges</li>
-<li><strong>Recommendation Systems:</strong> Connecting users, products, and interactions in e-commerce platforms</li>
+<li><strong>Social Networks:</strong> Predicting user behavior and connections on platforms like Facebook or LinkedIn, where users are nodes and friendships are edges</li>
+<li><strong>Drug Discovery:</strong> Modeling molecular structures where atoms are nodes and chemical bonds are edges, helping researchers predict drug properties</li>
+<li><strong>Traffic Prediction:</strong> Understanding road networks where intersections are nodes and roads are edges, enabling better route planning</li>
+<li><strong>Recommendation Systems:</strong> Connecting users, products, and interactions in e-commerce platforms to suggest relevant items</li>
+<li><strong>Knowledge Graphs:</strong> Organizing and reasoning over facts and relationships, like Google’s Knowledge Graph</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="placeholder-applications.jpg" class="img-fluid figure-img" alt="Various applications of graph transformers"></p>
+<p><img src="placeholder-applications.svg" class="img-fluid figure-img" alt="Various applications of graph transformers"></p>
 <figcaption>Graph Transformer Applications</figcaption>
 </figure>
 </div>
-<p>When a predictive query is submitted, KumoRFM extracts context examples from historical subgraphs relevant to the task and applies in-context learning at inference time, generating predictions without task-specific training.</p>
-<p>This allows the model to handle different schemas and task types directly, essentially learning relational structure and semantics once and applying that knowledge broadly.</p>
 </section>
-</section>
-<section id="advantages-of-this-approach" class="level2">
-<h2 class="anchored" data-anchor-id="advantages-of-this-approach">Advantages of This Approach</h2>
+<section id="key-advantages" class="level2">
+<h2 class="anchored" data-anchor-id="key-advantages">Key Advantages</h2>
+<p>This approach has several advantages:</p>
 <ul>
-<li><strong>Less feature engineering</strong> - No more manual SQL queries and aggregations</li>
-<li><strong>Faster experimentation</strong> - Test ideas quickly without data prep</li>
-<li><strong>More scalable ML pipelines</strong> - Works across different databases</li>
-<li><strong>Easier deployment</strong> - One model for multiple use cases</li>
-</ul>
-</section>
-<section id="challenges-and-tradeoffs" class="level2">
-<h2 class="anchored" data-anchor-id="challenges-and-tradeoffs">Challenges and Tradeoffs</h2>
-<ul>
-<li>Computational complexity</li>
-<li>Interpretability of learned representations</li>
-<li>Performance versus domain-specific features</li>
-<li>Integration with existing data infrastructure</li>
-</ul>
-</section>
-<section id="implications-for-data-science" class="level2">
-<h2 class="anchored" data-anchor-id="implications-for-data-science">Implications for Data Science</h2>
-<p>This approach shifts the role of data scientists from feature engineering to problem framing. Similar to foundation models in other domains (like GPT for text or DALL-E for images), it points toward the future of ML on structured data.</p>
-<p><strong>The transformation:</strong></p>
-<ul>
-<li><strong>Before:</strong> 80% time on data prep, 20% on modeling</li>
-<li><strong>After:</strong> 20% time on data prep, 80% on insights and decisions</li>
+<li><strong>No Complex Queries:</strong> Analysts no longer need to write complex SQL queries or manually engineer features</li>
+<li><strong>Instant Predictions:</strong> Models can generate predictions instantly for new questions</li>
+<li><strong>Universal Application:</strong> The same approach can be applied across different databases and organizations</li>
+<li><strong>Reduced Errors:</strong> Eliminates manual data preparation mistakes</li>
+<li><strong>Time Savings:</strong> Allows analysts to focus on interpreting results rather than preparing data</li>
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="placeholder-transformation.jpg" class="img-fluid figure-img" alt="Evolution of data scientist role"></p>
+<p><img src="placeholder-transformation.svg" class="img-fluid figure-img" alt="Evolution of data scientist role"></p>
 <figcaption>Role Transformation</figcaption>
 </figure>
 </div>
 </section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>Database-agnostic ML reduces friction between relational data and modeling. Solutions like KumoRFM show that this approach is possible and practical today.</p>
-<p><strong>Key takeaway:</strong> Leveraging relational structure directly allows faster, more robust predictions across diverse databases. This means businesses can unlock the full value of their relational data in a way that is fast, reliable, and scalable.</p>
+<section id="the-impact" class="level2">
+<h2 class="anchored" data-anchor-id="the-impact">The Impact</h2>
+<p>In short, database-agnostic machine learning allows businesses to unlock the full value of their relational data in a way that is fast, reliable, and scalable. Tools like KumoRFM demonstrate that it’s possible to combine advanced machine learning with the complex structure of relational databases, making insights more accessible and actionable for decision makers.</p>
 <p>As a result, this shift transforms the role of data scientists from manual feature engineering to higher-level problem formulation and decision-making.</p>
 </section>
 <section id="references" class="level2">

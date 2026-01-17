@@ -4,125 +4,62 @@ author: "Viction"
 date: "2024-01-20"
 categories: [machine-learning, databases, data-science]
 description: "Learn how to make predictions from relational databases without the hassle of manual feature engineering"
-image: "thumbnail.jpg"
+image: "thumbnail.svg"
 ---
-
-## Do You Have a Database? Want Predictions Without Data Scientists?
 
 Do you have a database? Do you want to make predictions without the hassles of having data scientists? I got you covered!
 
-![Database to ML Pipeline](placeholder-pipeline.jpg){fig-alt="Illustration of database to ML pipeline"}
+![Database to ML Pipeline](placeholder-pipeline.svg){fig-alt="Illustration of database to ML pipeline"}
 
-## Introduction & Motivation
+## The Challenge with Relational Data
 
-Most real-world data lives in relational databases. These are systems that organize information into tables, like spreadsheets, which can be linked together using keys - like connecting a "Customers" table with an "Orders" table.
+Most companies store their data in relational databases. These are systems that organize information into tables, like spreadsheets, which can be linked together using keys - like connecting a "Customers" table with an "Orders" table. While this structure is great for storing large amounts of data efficiently, it can be challenging when you want to use machine learning to make predictions or gain insights.
 
-**Pain points in data science:**
+Traditionally, machine learning models expect all the data in a single, flat table. This means analysts have to manually combine tables, calculate summary statistics, and create new "features" from the raw data. This is a process that is very time consuming, error-prone, and specific to each database. If a database changes even slightly, the model may break, and all the work has to be redone - fyi job of the data scientist.
 
-- ML models expect flat tables
-- Relational data is complex and interconnected
-- Better approaches are needed to reduce manual data preparation and speed up ML workflows
+![Relational Database Schema](placeholder-schema.svg){fig-alt="Example of relational database schema showing table relationships"}
 
-## Relational Data Basics
+## The Solution: Database-Agnostic Machine Learning
 
-A relational database consists of tables, rows, and columns, with primary keys and foreign keys connecting tables.
+The solution is database-agnostic machine learning, which allows models to work directly with relational data without manual preparation. "Agnostic" here means flexible and the model can work across different database structures without needing to be customized for each one.
 
-**Examples of real-world relational data:**
+![The Challenge](placeholder-challenge.svg){fig-alt="Visualization of schema diversity challenge"}
 
-- Customers, orders, products
-- Users, events, transactions
-- Databases have inbuilt graph charts explaining relationships between tables
+## KumoRFM: A Real-World Example
 
-![Relational Database Schema](placeholder-schema.jpg){fig-alt="Example of relational database schema showing table relationships"}
+A real-world example of this approach is **KumoRFM**, a tool that works like a "foundation model" for relational data. Think of it as a large language model but for structured business data instead of text. KumoRFM represents tables and their relationships as a graph, where each row is a point (node) and connections between tables are lines (edges). Using a graph transformer, the model can automatically learn patterns and relationships across tables, so it understands the structure and meaning of the data.
 
-## Traditional ML Workflow on Relational Data
+![Graph Representation](placeholder-graph.svg){fig-alt="Relational data represented as a graph structure"}
 
-**Manual data preparation steps:**
-
-- Writing joins
-- Aggregations and feature engineering
-- Flattening data into a single table
-- Data is spread out and not easy to track
-
-**Problems with this approach:**
-
-- Time-consuming
-- Error-prone
-- Highly specific to one schema
-
-## The Core Challenge
-
-Each database has a different schema. Models and pipelines often break when schemas change. Reusing models across organizations or datasets is difficult.
-
-![The Challenge](placeholder-challenge.jpg){fig-alt="Visualization of schema diversity challenge"}
-
-## New Approach: Database-Agnostic Modeling
-
-**High-level idea:** build models that learn directly from relational structure.
-
-**Key goals:**
-
-- Avoid manual joins
-- Reduce schema-specific logic
-- Generalize across different databases
-
-## How This Works (Conceptually)
-
-A concrete example of this approach is **KumoRFM**, a relational foundation model built for predictive tasks on structured data.
-
-Instead of requiring manual feature engineering or separate models for each task, KumoRFM represents tables and their foreign‑key relationships as a temporal, heterogeneous graph. Each table row becomes a node, and relationships between tables become edges.
-
-![Graph Representation](placeholder-graph.jpg){fig-alt="Relational data represented as a graph structure"}
-
-It uses a **Relational Graph Transformer** architecture, which performs attention across the graph to integrate information from related tables and capture complex multi‑table patterns in the data.
-
-### Graph Transformers in Action
+## Graph Transformers: Beyond Databases
 
 Graph transformers are a powerful architecture that extends the transformer model (famous from GPT and BERT) to work with graph-structured data. While traditional transformers work on sequences (like sentences), graph transformers can process nodes and edges in a graph.
 
 **Where else are graph transformers used?**
 
-- **Social Networks:** Predicting user behavior and connections on platforms like Facebook or LinkedIn
-- **Drug Discovery:** Modeling molecular structures where atoms are nodes and bonds are edges
-- **Traffic Prediction:** Understanding road networks where intersections are nodes and roads are edges
-- **Recommendation Systems:** Connecting users, products, and interactions in e-commerce platforms
+- **Social Networks:** Predicting user behavior and connections on platforms like Facebook or LinkedIn, where users are nodes and friendships are edges
+- **Drug Discovery:** Modeling molecular structures where atoms are nodes and chemical bonds are edges, helping researchers predict drug properties
+- **Traffic Prediction:** Understanding road networks where intersections are nodes and roads are edges, enabling better route planning
+- **Recommendation Systems:** Connecting users, products, and interactions in e-commerce platforms to suggest relevant items
+- **Knowledge Graphs:** Organizing and reasoning over facts and relationships, like Google's Knowledge Graph
 
-![Graph Transformer Applications](placeholder-applications.jpg){fig-alt="Various applications of graph transformers"}
+![Graph Transformer Applications](placeholder-applications.svg){fig-alt="Various applications of graph transformers"}
 
-When a predictive query is submitted, KumoRFM extracts context examples from historical subgraphs relevant to the task and applies in-context learning at inference time, generating predictions without task-specific training.
+## Key Advantages
 
-This allows the model to handle different schemas and task types directly, essentially learning relational structure and semantics once and applying that knowledge broadly.
+This approach has several advantages:
 
-## Advantages of This Approach
+- **No Complex Queries:** Analysts no longer need to write complex SQL queries or manually engineer features
+- **Instant Predictions:** Models can generate predictions instantly for new questions
+- **Universal Application:** The same approach can be applied across different databases and organizations
+- **Reduced Errors:** Eliminates manual data preparation mistakes
+- **Time Savings:** Allows analysts to focus on interpreting results rather than preparing data
 
-- **Less feature engineering** - No more manual SQL queries and aggregations
-- **Faster experimentation** - Test ideas quickly without data prep
-- **More scalable ML pipelines** - Works across different databases
-- **Easier deployment** - One model for multiple use cases
+![Role Transformation](placeholder-transformation.svg){fig-alt="Evolution of data scientist role"}
 
-## Challenges and Tradeoffs
+## The Impact
 
-- Computational complexity
-- Interpretability of learned representations
-- Performance versus domain-specific features
-- Integration with existing data infrastructure
-
-## Implications for Data Science
-
-This approach shifts the role of data scientists from feature engineering to problem framing. Similar to foundation models in other domains (like GPT for text or DALL-E for images), it points toward the future of ML on structured data.
-
-**The transformation:**
-
-- **Before:** 80% time on data prep, 20% on modeling
-- **After:** 20% time on data prep, 80% on insights and decisions
-
-![Role Transformation](placeholder-transformation.jpg){fig-alt="Evolution of data scientist role"}
-
-## Conclusion
-
-Database-agnostic ML reduces friction between relational data and modeling. Solutions like KumoRFM show that this approach is possible and practical today.
-
-**Key takeaway:** Leveraging relational structure directly allows faster, more robust predictions across diverse databases. This means businesses can unlock the full value of their relational data in a way that is fast, reliable, and scalable.
+In short, database-agnostic machine learning allows businesses to unlock the full value of their relational data in a way that is fast, reliable, and scalable. Tools like KumoRFM demonstrate that it's possible to combine advanced machine learning with the complex structure of relational databases, making insights more accessible and actionable for decision makers. 
 
 As a result, this shift transforms the role of data scientists from manual feature engineering to higher-level problem formulation and decision-making.
 

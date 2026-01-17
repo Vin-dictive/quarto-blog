@@ -4,21 +4,21 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Welcome to my blog! This is where I share my thoughts and ideas.\n\n\nFeel free to reach out at: email@example.com"
+    "text": "Welcome to my blog! This is where I share my thoughts and ideas.\n\n\nFeel free to reach out at: vinay.valson@gmail.com"
   },
   {
     "objectID": "about.html#about-this-blog",
     "href": "about.html#about-this-blog",
     "title": "About",
     "section": "",
-    "text": "Welcome to my blog! This is where I share my thoughts and ideas.\n\n\nFeel free to reach out at: email@example.com"
+    "text": "Welcome to my blog! This is where I share my thoughts and ideas.\n\n\nFeel free to reach out at: vinay.valson@gmail.com"
   },
   {
     "objectID": "posts/database-agnostic-ml/index.html",
     "href": "posts/database-agnostic-ml/index.html",
     "title": "Database-Agnostic Machine Learning",
     "section": "",
-    "text": "Do you have a database? Do you want to make predictions without the hassles of having data scientists? I got you covered!\n\n\n\nDatabase to ML Pipeline"
+    "text": "Do you have a database? Do you want to make predictions without the hassles of having data scientists? I got you covered!"
   },
   {
     "objectID": "posts/database-agnostic-ml/index.html#do-you-have-a-database-want-predictions-without-data-scientists",
@@ -28,74 +28,46 @@
     "text": "Do you have a database? Do you want to make predictions without the hassles of having data scientists? I got you covered!\n\n\n\nDatabase to ML Pipeline"
   },
   {
-    "objectID": "posts/database-agnostic-ml/index.html#introduction-motivation",
-    "href": "posts/database-agnostic-ml/index.html#introduction-motivation",
+    "objectID": "posts/database-agnostic-ml/index.html#the-challenge-with-relational-data",
+    "href": "posts/database-agnostic-ml/index.html#the-challenge-with-relational-data",
     "title": "Database-Agnostic Machine Learning",
-    "section": "Introduction & Motivation",
-    "text": "Introduction & Motivation\nMost real-world data lives in relational databases. These are systems that organize information into tables, like spreadsheets, which can be linked together using keys - like connecting a “Customers” table with an “Orders” table.\nPain points in data science:\n\nML models expect flat tables\nRelational data is complex and interconnected\nBetter approaches are needed to reduce manual data preparation and speed up ML workflows"
+    "section": "The Challenge with Relational Data",
+    "text": "The Challenge with Relational Data\nMost companies store their data in relational databases. These are systems that organize information into tables, like spreadsheets, which can be linked together using keys - like connecting a “Customers” table with an “Orders” table. While this structure is great for storing large amounts of data efficiently, it can be challenging when you want to use machine learning to make predictions or gain insights.\nTraditionally, machine learning models expect all the data in a single, flat table. This means analysts have to manually combine tables, calculate summary statistics, and create new “features” from the raw data. This is a process that is very time consuming, error-prone, and specific to each database. If a database changes even slightly, the model may break, and all the work has to be redone - fyi job of the data scientist.\n\n\n\nRelational Database Schema"
   },
   {
-    "objectID": "posts/database-agnostic-ml/index.html#relational-data-basics",
-    "href": "posts/database-agnostic-ml/index.html#relational-data-basics",
+    "objectID": "posts/database-agnostic-ml/index.html#the-solution-database-agnostic-machine-learning",
+    "href": "posts/database-agnostic-ml/index.html#the-solution-database-agnostic-machine-learning",
     "title": "Database-Agnostic Machine Learning",
-    "section": "Relational Data Basics",
-    "text": "Relational Data Basics\nA relational database consists of tables, rows, and columns, with primary keys and foreign keys connecting tables.\nExamples of real-world relational data:\n\nCustomers, orders, products\nUsers, events, transactions\nDatabases have inbuilt graph charts explaining relationships between tables\n\n\n\n\nRelational Database Schema"
+    "section": "The Solution: Database-Agnostic Machine Learning",
+    "text": "The Solution: Database-Agnostic Machine Learning\nThe solution is database-agnostic machine learning, which allows models to work directly with relational data without manual preparation. “Agnostic” here means flexible and the model can work across different database structures without needing to be customized for each one.\n\n\n\nThe Challenge"
   },
   {
-    "objectID": "posts/database-agnostic-ml/index.html#traditional-ml-workflow-on-relational-data",
-    "href": "posts/database-agnostic-ml/index.html#traditional-ml-workflow-on-relational-data",
+    "objectID": "posts/database-agnostic-ml/index.html#kumorfm-a-real-world-example",
+    "href": "posts/database-agnostic-ml/index.html#kumorfm-a-real-world-example",
     "title": "Database-Agnostic Machine Learning",
-    "section": "Traditional ML Workflow on Relational Data",
-    "text": "Traditional ML Workflow on Relational Data\nManual data preparation steps:\n\nWriting joins\nAggregations and feature engineering\nFlattening data into a single table\nData is spread out and not easy to track\n\nProblems with this approach:\n\nTime-consuming\nError-prone\nHighly specific to one schema"
+    "section": "KumoRFM: A Real-World Example",
+    "text": "KumoRFM: A Real-World Example\nA real-world example of this approach is KumoRFM, a tool that works like a “foundation model” for relational data. Think of it as a large language model but for structured business data instead of text. KumoRFM represents tables and their relationships as a graph, where each row is a point (node) and connections between tables are lines (edges). Using a graph transformer, the model can automatically learn patterns and relationships across tables, so it understands the structure and meaning of the data.\n\n\n\nGraph Representation"
   },
   {
-    "objectID": "posts/database-agnostic-ml/index.html#the-core-challenge",
-    "href": "posts/database-agnostic-ml/index.html#the-core-challenge",
+    "objectID": "posts/database-agnostic-ml/index.html#graph-transformers-beyond-databases",
+    "href": "posts/database-agnostic-ml/index.html#graph-transformers-beyond-databases",
     "title": "Database-Agnostic Machine Learning",
-    "section": "The Core Challenge",
-    "text": "The Core Challenge\nEach database has a different schema. Models and pipelines often break when schemas change. Reusing models across organizations or datasets is difficult.\n\n\n\nThe Challenge"
+    "section": "Graph Transformers: Beyond Databases",
+    "text": "Graph Transformers: Beyond Databases\nGraph transformers are a powerful architecture that extends the transformer model (famous from GPT and BERT) to work with graph-structured data. While traditional transformers work on sequences (like sentences), graph transformers can process nodes and edges in a graph.\nWhere else are graph transformers used?\n\nSocial Networks: Predicting user behavior and connections on platforms like Facebook or LinkedIn, where users are nodes and friendships are edges\nDrug Discovery: Modeling molecular structures where atoms are nodes and chemical bonds are edges, helping researchers predict drug properties\nTraffic Prediction: Understanding road networks where intersections are nodes and roads are edges, enabling better route planning\nRecommendation Systems: Connecting users, products, and interactions in e-commerce platforms to suggest relevant items\nKnowledge Graphs: Organizing and reasoning over facts and relationships, like Google’s Knowledge Graph\n\n\n\n\nGraph Transformer Applications"
   },
   {
-    "objectID": "posts/database-agnostic-ml/index.html#new-approach-database-agnostic-modeling",
-    "href": "posts/database-agnostic-ml/index.html#new-approach-database-agnostic-modeling",
+    "objectID": "posts/database-agnostic-ml/index.html#key-advantages",
+    "href": "posts/database-agnostic-ml/index.html#key-advantages",
     "title": "Database-Agnostic Machine Learning",
-    "section": "New Approach: Database-Agnostic Modeling",
-    "text": "New Approach: Database-Agnostic Modeling\nHigh-level idea: build models that learn directly from relational structure.\nKey goals:\n\nAvoid manual joins\nReduce schema-specific logic\nGeneralize across different databases"
+    "section": "Key Advantages",
+    "text": "Key Advantages\nThis approach has several advantages:\n\nNo Complex Queries: Analysts no longer need to write complex SQL queries or manually engineer features\nInstant Predictions: Models can generate predictions instantly for new questions\nUniversal Application: The same approach can be applied across different databases and organizations\nReduced Errors: Eliminates manual data preparation mistakes\nTime Savings: Allows analysts to focus on interpreting results rather than preparing data\n\n\n\n\nRole Transformation"
   },
   {
-    "objectID": "posts/database-agnostic-ml/index.html#how-this-works-conceptually",
-    "href": "posts/database-agnostic-ml/index.html#how-this-works-conceptually",
+    "objectID": "posts/database-agnostic-ml/index.html#the-impact",
+    "href": "posts/database-agnostic-ml/index.html#the-impact",
     "title": "Database-Agnostic Machine Learning",
-    "section": "How This Works (Conceptually)",
-    "text": "How This Works (Conceptually)\nA concrete example of this approach is KumoRFM, a relational foundation model built for predictive tasks on structured data.\nInstead of requiring manual feature engineering or separate models for each task, KumoRFM represents tables and their foreign‑key relationships as a temporal, heterogeneous graph. Each table row becomes a node, and relationships between tables become edges.\n\n\n\nGraph Representation\n\n\nIt uses a Relational Graph Transformer architecture, which performs attention across the graph to integrate information from related tables and capture complex multi‑table patterns in the data.\n\nGraph Transformers in Action\nGraph transformers are a powerful architecture that extends the transformer model (famous from GPT and BERT) to work with graph-structured data. While traditional transformers work on sequences (like sentences), graph transformers can process nodes and edges in a graph.\nWhere else are graph transformers used?\n\nSocial Networks: Predicting user behavior and connections on platforms like Facebook or LinkedIn\nDrug Discovery: Modeling molecular structures where atoms are nodes and bonds are edges\nTraffic Prediction: Understanding road networks where intersections are nodes and roads are edges\nRecommendation Systems: Connecting users, products, and interactions in e-commerce platforms\n\n\n\n\nGraph Transformer Applications\n\n\nWhen a predictive query is submitted, KumoRFM extracts context examples from historical subgraphs relevant to the task and applies in-context learning at inference time, generating predictions without task-specific training.\nThis allows the model to handle different schemas and task types directly, essentially learning relational structure and semantics once and applying that knowledge broadly."
-  },
-  {
-    "objectID": "posts/database-agnostic-ml/index.html#advantages-of-this-approach",
-    "href": "posts/database-agnostic-ml/index.html#advantages-of-this-approach",
-    "title": "Database-Agnostic Machine Learning",
-    "section": "Advantages of This Approach",
-    "text": "Advantages of This Approach\n\nLess feature engineering - No more manual SQL queries and aggregations\nFaster experimentation - Test ideas quickly without data prep\nMore scalable ML pipelines - Works across different databases\nEasier deployment - One model for multiple use cases"
-  },
-  {
-    "objectID": "posts/database-agnostic-ml/index.html#challenges-and-tradeoffs",
-    "href": "posts/database-agnostic-ml/index.html#challenges-and-tradeoffs",
-    "title": "Database-Agnostic Machine Learning",
-    "section": "Challenges and Tradeoffs",
-    "text": "Challenges and Tradeoffs\n\nComputational complexity\nInterpretability of learned representations\nPerformance versus domain-specific features\nIntegration with existing data infrastructure"
-  },
-  {
-    "objectID": "posts/database-agnostic-ml/index.html#implications-for-data-science",
-    "href": "posts/database-agnostic-ml/index.html#implications-for-data-science",
-    "title": "Database-Agnostic Machine Learning",
-    "section": "Implications for Data Science",
-    "text": "Implications for Data Science\nThis approach shifts the role of data scientists from feature engineering to problem framing. Similar to foundation models in other domains (like GPT for text or DALL-E for images), it points toward the future of ML on structured data.\nThe transformation:\n\nBefore: 80% time on data prep, 20% on modeling\nAfter: 20% time on data prep, 80% on insights and decisions\n\n\n\n\nRole Transformation"
-  },
-  {
-    "objectID": "posts/database-agnostic-ml/index.html#conclusion",
-    "href": "posts/database-agnostic-ml/index.html#conclusion",
-    "title": "Database-Agnostic Machine Learning",
-    "section": "Conclusion",
-    "text": "Conclusion\nDatabase-agnostic ML reduces friction between relational data and modeling. Solutions like KumoRFM show that this approach is possible and practical today.\nKey takeaway: Leveraging relational structure directly allows faster, more robust predictions across diverse databases. This means businesses can unlock the full value of their relational data in a way that is fast, reliable, and scalable.\nAs a result, this shift transforms the role of data scientists from manual feature engineering to higher-level problem formulation and decision-making."
+    "section": "The Impact",
+    "text": "The Impact\nIn short, database-agnostic machine learning allows businesses to unlock the full value of their relational data in a way that is fast, reliable, and scalable. Tools like KumoRFM demonstrate that it’s possible to combine advanced machine learning with the complex structure of relational databases, making insights more accessible and actionable for decision makers.\nAs a result, this shift transforms the role of data scientists from manual feature engineering to higher-level problem formulation and decision-making."
   },
   {
     "objectID": "posts/database-agnostic-ml/index.html#references",
