@@ -1,0 +1,7 @@
+\contentsline {subsection}{The Challenge with Relational Data}{1}{section*.2}%
+\contentsline {subsection}{The Solution: Database-Agnostic Machine Learning}{2}{section*.4}%
+\contentsline {subsection}{Graph Transformers: Beyond Databases}{2}{section*.6}%
+\contentsline {subsection}{KumoRFM: A Real-World Example}{2}{section*.8}%
+\contentsline {subsection}{Key Advantages}{3}{section*.10}%
+\contentsline {subsection}{The Impact}{4}{section*.12}%
+\contentsline {subsection}{References}{4}{section*.13}%

@@ -70,10 +70,52 @@
     "text": "References\n\nKumoRFM Video Introduction\nKumoRFM Getting Started\nCase Study: Slashing Utility Costs with KumoRFM"
   },
   {
+    "objectID": "posts/rise-of-slms/index.html",
+    "href": "posts/rise-of-slms/index.html",
+    "title": "The Rise of Small Language Models (SLMs)",
+    "section": "",
+    "text": "The world of AI has been dominated by massive, billion-parameter Large Language Models (LLMs). However, a new trend is emerging: the rise of Small Language Models (SLMs). These smaller, more efficient models are proving to be powerful alternatives for a wide range of applications.\nThis post explores the growing importance of SLMs, their advantages over their larger counterparts, and how they are democratizing access to cutting-edge AI technology."
+  },
+  {
+    "objectID": "posts/rise-of-slms/index.html#introduction",
+    "href": "posts/rise-of-slms/index.html#introduction",
+    "title": "The Rise of Small Language Models (SLMs)",
+    "section": "",
+    "text": "The world of AI has been dominated by massive, billion-parameter Large Language Models (LLMs). However, a new trend is emerging: the rise of Small Language Models (SLMs). These smaller, more efficient models are proving to be powerful alternatives for a wide range of applications.\nThis post explores the growing importance of SLMs, their advantages over their larger counterparts, and how they are democratizing access to cutting-edge AI technology."
+  },
+  {
+    "objectID": "posts/rise-of-slms/index.html#what-are-small-language-models",
+    "href": "posts/rise-of-slms/index.html#what-are-small-language-models",
+    "title": "The Rise of Small Language Models (SLMs)",
+    "section": "What are Small Language Models?",
+    "text": "What are Small Language Models?\nTODO: Define SLMs and provide some examples (e.g., Phi-3, Gemma)."
+  },
+  {
+    "objectID": "posts/rise-of-slms/index.html#key-advantages-of-slms",
+    "href": "posts/rise-of-slms/index.html#key-advantages-of-slms",
+    "title": "The Rise of Small Language Models (SLMs)",
+    "section": "Key Advantages of SLMs",
+    "text": "Key Advantages of SLMs\nTODO: Discuss the benefits, such as lower computational cost, faster inference, and easier fine-tuning."
+  },
+  {
+    "objectID": "posts/rise-of-slms/index.html#use-cases-for-slms",
+    "href": "posts/rise-of-slms/index.html#use-cases-for-slms",
+    "title": "The Rise of Small Language Models (SLMs)",
+    "section": "Use Cases for SLMs",
+    "text": "Use Cases for SLMs\nTODO: Provide practical examples of where SLMs excel, such as on-device AI, edge computing, and specialized business functions."
+  },
+  {
+    "objectID": "posts/rise-of-slms/index.html#the-future-is-small-and-mighty",
+    "href": "posts/rise-of-slms/index.html#the-future-is-small-and-mighty",
+    "title": "The Rise of Small Language Models (SLMs)",
+    "section": "The Future is Small and Mighty",
+    "text": "The Future is Small and Mighty\nTODO: Conclude with a look at the future of language models and the role SLMs will play."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Vinay Valson’s Blogs",
     "section": "",
-    "text": "Database-Agnostic Machine Learning\n\n\n\nmachine-learning\n\ndatabases\n\ndata-science\n\n\n\nLearn how to make predictions from relational databases without the hassle of manual feature engineering\n\n\n\n\n\nJan 20, 2024\n\n\nVinay Valson\n\n\n\n\n\nNo matching items"
+    "text": "Database-Agnostic Machine Learning\n\n\n\nmachine-learning\n\ndatabases\n\ndata-science\n\n\n\nLearn how to make predictions from relational databases without the hassle of manual feature engineering\n\n\n\n\n\nJan 20, 2026\n\n\nVinay Valson\n\n\n\n\n\n\n\n\n\n\n\n\nThe Rise of Small Language Models (SLMs)\n\n\n\nAI\n\nLLMs\n\nSLMs\n\n\n\n\n\n\n\n\n\nJan 18, 2026\n\n\nViction\n\n\n\n\n\nNo matching items"
   }
 ]

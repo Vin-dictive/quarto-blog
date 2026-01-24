@@ -1,0 +1,29 @@
+---
+title: "The Rise of Small Language Models (SLMs)"
+author: "Viction"
+date: "2026-01-18"
+categories: [AI, LLMs, SLMs]
+image: "thumbnail.svg"
+---
+
+## Introduction
+
+The world of AI has been dominated by massive, billion-parameter Large Language Models (LLMs). However, a new trend is emerging: the rise of Small Language Models (SLMs). These smaller, more efficient models are proving to be powerful alternatives for a wide range of applications.
+
+This post explores the growing importance of SLMs, their advantages over their larger counterparts, and how they are democratizing access to cutting-edge AI technology.
+
+## What are Small Language Models?
+
+*TODO: Define SLMs and provide some examples (e.g., Phi-3, Gemma).*
+
+## Key Advantages of SLMs
+
+*TODO: Discuss the benefits, such as lower computational cost, faster inference, and easier fine-tuning.*
+
+## Use Cases for SLMs
+
+*TODO: Provide practical examples of where SLMs excel, such as on-device AI, edge computing, and specialized business functions.*
+
+## The Future is Small and Mighty
+
+*TODO: Conclude with a look at the future of language models and the role SLMs will play.*

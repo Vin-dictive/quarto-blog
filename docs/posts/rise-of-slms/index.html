@@ -6,11 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Vinay Valson">
-<meta name="dcterms.date" content="2026-01-20">
-<meta name="description" content="Learn how to make predictions from relational databases without the hassle of manual feature engineering">
+<meta name="author" content="Viction">
+<meta name="dcterms.date" content="2026-01-18">
 
-<title>Database-Agnostic Machine Learning – Vinay Valson’s Blogs</title>
+<title>The Rise of Small Language Models (SLMs) – Vinay Valson’s Blogs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -283,13 +282,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-challenge-with-relational-data" id="toc-the-challenge-with-relational-data" class="nav-link active" data-scroll-target="#the-challenge-with-relational-data">The Challenge with Relational Data</a></li>
-  <li><a href="#the-solution-database-agnostic-machine-learning" id="toc-the-solution-database-agnostic-machine-learning" class="nav-link" data-scroll-target="#the-solution-database-agnostic-machine-learning">The Solution: Database-Agnostic Machine Learning</a></li>
-  <li><a href="#graph-transformers-beyond-databases" id="toc-graph-transformers-beyond-databases" class="nav-link" data-scroll-target="#graph-transformers-beyond-databases">Graph Transformers: Beyond Databases</a></li>
-  <li><a href="#kumorfm-a-real-world-example" id="toc-kumorfm-a-real-world-example" class="nav-link" data-scroll-target="#kumorfm-a-real-world-example">KumoRFM: A Real-World Example</a></li>
-  <li><a href="#key-advantages" id="toc-key-advantages" class="nav-link" data-scroll-target="#key-advantages">Key Advantages</a></li>
-  <li><a href="#the-impact" id="toc-the-impact" class="nav-link" data-scroll-target="#the-impact">The Impact</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#what-are-small-language-models" id="toc-what-are-small-language-models" class="nav-link" data-scroll-target="#what-are-small-language-models">What are Small Language Models?</a></li>
+  <li><a href="#key-advantages-of-slms" id="toc-key-advantages-of-slms" class="nav-link" data-scroll-target="#key-advantages-of-slms">Key Advantages of SLMs</a></li>
+  <li><a href="#use-cases-for-slms" id="toc-use-cases-for-slms" class="nav-link" data-scroll-target="#use-cases-for-slms">Use Cases for SLMs</a></li>
+  <li><a href="#the-future-is-small-and-mighty" id="toc-the-future-is-small-and-mighty" class="nav-link" data-scroll-target="#the-future-is-small-and-mighty">The Future is Small and Mighty</a></li>
   </ul>
 </nav>
     </div>
@@ -299,19 +296,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Database-Agnostic Machine Learning</h1>
+<h1 class="title">The Rise of Small Language Models (SLMs)</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">machine-learning</div>
-    <div class="quarto-category">databases</div>
-    <div class="quarto-category">data-science</div>
+    <div class="quarto-category">AI</div>
+    <div class="quarto-category">LLMs</div>
+    <div class="quarto-category">SLMs</div>
   </div>
   </div>
 
-<div>
-  <div class="description">
-    Learn how to make predictions from relational databases without the hassle of manual feature engineering
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -319,14 +311,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Vinay Valson </p>
+             <p>Viction </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 20, 2026</p>
+      <p class="date">January 18, 2026</p>
     </div>
   </div>
   
@@ -338,85 +330,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Do you have a database? Do you want to make predictions without the hassles of having data scientists? I got you covered!</p>
-<section id="the-challenge-with-relational-data" class="level2">
-<h2 class="anchored" data-anchor-id="the-challenge-with-relational-data">The Challenge with Relational Data</h2>
-<p>Most companies store their data in relational databases. These are systems that organize information into tables, like spreadsheets, which can be linked together using keys - like connecting a “Customers” table with an “Orders” table. While this structure is great for storing large amounts of data efficiently, it can be challenging when you want to use machine learning to make predictions or gain insights.</p>
-<p>Traditionally, machine learning models expect all the data in a single, flat table. This means analysts have to manually combine tables, calculate summary statistics, and create new “features” from the raw data. This is a process that is very time consuming, error-prone, and specific to each database. If a database changes even slightly, the model may break, and all the work has to be redone - fyi job of the data scientist.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="placeholder-pipeline.png" class="img-fluid figure-img" alt="Data Science Pipeline"></p>
-<figcaption>Data Science Pipeline</figcaption>
-</figure>
-</div>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The world of AI has been dominated by massive, billion-parameter Large Language Models (LLMs). However, a new trend is emerging: the rise of Small Language Models (SLMs). These smaller, more efficient models are proving to be powerful alternatives for a wide range of applications.</p>
+<p>This post explores the growing importance of SLMs, their advantages over their larger counterparts, and how they are democratizing access to cutting-edge AI technology.</p>
 </section>
-<section id="the-solution-database-agnostic-machine-learning" class="level2">
-<h2 class="anchored" data-anchor-id="the-solution-database-agnostic-machine-learning">The Solution: Database-Agnostic Machine Learning</h2>
-<p>The solution is database-agnostic machine learning, which allows models to work directly with relational data without manual preparation. “Agnostic” here means flexible and the model can work across different database structures without needing to be customized for each one.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="placeholder-schema.png" class="img-fluid figure-img" alt="Example of relational database schema showing table relationships"></p>
-<figcaption>Relational Database Schema</figcaption>
-</figure>
-</div>
+<section id="what-are-small-language-models" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-small-language-models">What are Small Language Models?</h2>
+<p><em>TODO: Define SLMs and provide some examples (e.g., Phi-3, Gemma).</em></p>
 </section>
-<section id="graph-transformers-beyond-databases" class="level2">
-<h2 class="anchored" data-anchor-id="graph-transformers-beyond-databases">Graph Transformers: Beyond Databases</h2>
-<p>Graph transformers are a powerful architecture that extends the transformer model (famous from GPT and BERT) to work with graph-structured data. While traditional transformers work on sequences (like sentences), graph transformers can process nodes and edges in a graph.</p>
-<p><strong>Where else are graph transformers used?</strong></p>
-<ul>
-<li><strong>Social Networks:</strong> Predicting user behavior and connections on platforms like Facebook or LinkedIn, where users are nodes and friendships are edges</li>
-<li><strong>Drug Discovery:</strong> Modeling molecular structures where atoms are nodes and chemical bonds are edges, helping researchers predict drug properties</li>
-<li><strong>Traffic Prediction:</strong> Understanding road networks where intersections are nodes and roads are edges, enabling better route planning</li>
-<li><strong>Recommendation Systems:</strong> Connecting users, products, and interactions in e-commerce platforms to suggest relevant items</li>
-<li><strong>Knowledge Graphs:</strong> Organizing and reasoning over facts and relationships, like Google’s Knowledge Graph</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="placeholder-graph.gif" class="img-fluid figure-img" alt="BertViz"></p>
-<figcaption>Graph Transformer Visulization</figcaption>
-</figure>
-</div>
+<section id="key-advantages-of-slms" class="level2">
+<h2 class="anchored" data-anchor-id="key-advantages-of-slms">Key Advantages of SLMs</h2>
+<p><em>TODO: Discuss the benefits, such as lower computational cost, faster inference, and easier fine-tuning.</em></p>
 </section>
-<section id="kumorfm-a-real-world-example" class="level2">
-<h2 class="anchored" data-anchor-id="kumorfm-a-real-world-example">KumoRFM: A Real-World Example</h2>
-<p>A real-world example of this approach is <strong>KumoRFM</strong>, a tool that works like a “foundation model” for relational data. Think of it as a large language model but for structured business data instead of text. KumoRFM represents tables and their relationships as a graph, where each row is a point (node) and connections between tables are lines (edges). Using a graph transformer, the model can automatically learn patterns and relationships across tables, so it understands the structure and meaning of the data.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="placeholder-kumo.png" class="img-fluid figure-img" alt="Key capabilities of RFM"></p>
-<figcaption>Key capabilities of RFM</figcaption>
-</figure>
-</div>
+<section id="use-cases-for-slms" class="level2">
+<h2 class="anchored" data-anchor-id="use-cases-for-slms">Use Cases for SLMs</h2>
+<p><em>TODO: Provide practical examples of where SLMs excel, such as on-device AI, edge computing, and specialized business functions.</em></p>
 </section>
-<section id="key-advantages" class="level2">
-<h2 class="anchored" data-anchor-id="key-advantages">Key Advantages</h2>
-<p>This approach has several advantages:</p>
-<ul>
-<li><strong>No Complex Queries:</strong> Analysts no longer need to write complex SQL queries or manually engineer features</li>
-<li><strong>Instant Predictions:</strong> Models can generate predictions instantly for new questions</li>
-<li><strong>Universal Application:</strong> The same approach can be applied across different databases and organizations</li>
-<li><strong>Reduced Errors:</strong> Eliminates manual data preparation mistakes</li>
-<li><strong>Time Savings:</strong> Allows analysts to focus on interpreting results rather than preparing data</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="placeholder-transformation.svg" class="img-fluid figure-img" alt="Evolution of data scientist role"></p>
-<figcaption>Role Transformation</figcaption>
-</figure>
-</div>
-</section>
-<section id="the-impact" class="level2">
-<h2 class="anchored" data-anchor-id="the-impact">The Impact</h2>
-<p>In short, database-agnostic machine learning allows businesses to unlock the full value of their relational data in a way that is fast, reliable, and scalable. Tools like KumoRFM demonstrate that it’s possible to combine advanced machine learning with the complex structure of relational databases, making insights more accessible and actionable for decision makers.</p>
-<p>As a result, this shift transforms the role of data scientists from manual feature engineering to higher-level problem formulation and decision-making.</p>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=xzv0-wgQVSA">KumoRFM Video Introduction</a></li>
-<li><a href="https://kumorfm.ai/get-started">KumoRFM Getting Started</a></li>
-<li><a href="https://medium.com/@kumo.ai/from-megawatt-errors-to-millions-saved-slashing-utility-costs-with-kumo-rfm-94a790294a33">Case Study: Slashing Utility Costs with KumoRFM</a></li>
-</ul>
+<section id="the-future-is-small-and-mighty" class="level2">
+<h2 class="anchored" data-anchor-id="the-future-is-small-and-mighty">The Future is Small and Mighty</h2>
+<p><em>TODO: Conclude with a look at the future of language models and the role SLMs will play.</em></p>
 
 
 </section>

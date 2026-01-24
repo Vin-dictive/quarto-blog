@@ -1,0 +1,11 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="128" height="128" fill="#F2F2F2"/>
+<path d="M48 32C48 42.4243 39.4243 51 29 51C18.5757 51 10 42.4243 10 32C10 21.5757 18.5757 13 29 13C39.4243 13 48 21.5757 48 32Z" stroke="#333333" stroke-width="2"/>
+<path d="M29 51V60" stroke="#333333" stroke-width="2"/>
+<path d="M96 80C96 90.4243 87.4243 99 77 99C66.5757 99 58 90.4243 58 80C58 69.5757 66.5757 61 77 61C87.4243 61 96 69.5757 96 80Z" stroke="#333333" stroke-width="2"/>
+<path d="M77 99V108" stroke="#333333" stroke-width="2"/>
+<path d="M40 70L60 70" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M56 66L60 70L56 74" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="64" y="20" font-family="sans-serif" font-size="12" fill="#333333" text-anchor="middle">LLM</text>
+<text x="64" y="116" font-family="sans-serif" font-size="12" fill="#333333" text-anchor="middle">SLM</text>
+</svg>

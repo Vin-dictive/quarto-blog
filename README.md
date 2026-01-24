@@ -102,7 +102,7 @@ PDF versions will be available at: `https://[username].github.io/[repository-nam
    ---
    title: "My New Post Title"
    author: "Your Name"
-   date: "2024-01-20"
+   date: "2026-01-20"
    categories: [category1, category2]
    image: "thumbnail.jpg"
    ---
@@ -121,7 +121,7 @@ cat > index.qmd << 'EOF'
 ---
 title: "My New Post"
 author: "Your Name"
-date: "2024-01-20"
+date: "2026-01-20"
 categories: [general]
 ---
 
